@@ -23,6 +23,18 @@ recording and reviewing personal finances.
 - WPF for the desktop application
 - CLI for terminal usage
 - ClosedXML for Excel import and export
+- `System.Security.Cryptography` for data encryption and password hashing
+
+## Data security
+
+Profile files can be encrypted when a password is configured. The application
+uses AES-GCM authenticated encryption with a 256-bit key, a random salt, a
+random nonce, and an authentication tag. The encryption key is derived from
+the password using PBKDF2-HMAC-SHA256 with 100,000 iterations.
+
+Passwords are stored as SHA-256 hashes and are never stored in plain text.
+Encrypted profile data is stored locally in `wallet_data.json`, in the user's
+OneDrive folder when available or otherwise in the Documents folder.
 
 ## Project structure
 
