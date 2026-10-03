@@ -1,11 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Semestralka\FinanceTracker.csproj" />
+    <ProjectReference Include="..\FinanceTracker\FinanceTracker.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

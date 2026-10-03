@@ -1,5 +1,7 @@
 # FinanceTracker
 
+[![CI](https://github.com/ondrejkocun/financeTracker/actions/workflows/ci.yml/badge.svg)](https://github.com/ondrejkocun/financeTracker/actions/workflows/ci.yml)
+
 Personal finance tracker built with C# and .NET. The project provides both a
 Windows desktop interface (WPF) and a command-line interface (CLI) for
 recording and reviewing personal finances.
@@ -42,7 +44,8 @@ OneDrive folder when available or otherwise in the Documents folder.
 FinanceTracker/
 ├── FinanceTracker/       Shared models and services
 ├── FinanceTracker.CLI/   Command-line application
-└── FinanceTracker.WPF/   WPF desktop application
+├── FinanceTracker.WPF/   WPF desktop application
+└── FinanceTracker.Tests/ Unit tests
 ```
 
 ## Requirements
@@ -106,8 +109,22 @@ The WPF application provides wallet management, transaction filtering,
 budget tracking, summaries, charts, and Excel import/export through a graphical
 interface.
 
-## Current project note
+## Testing
 
-The solution file and project references still contain the previous
-`Semestralka` directory names. Before building the complete solution, update
-those references to the current `FinanceTracker` directory names.
+Run all unit tests from the repository root:
+
+```bash
+dotnet test FInanceTracker.slnx --configuration Release
+```
+
+The tests cover wallet balances and month filtering, password hashing and
+verification, and an Excel export/import round trip.
+
+## Continuous integration
+
+GitHub Actions restores, builds, and tests the solution on Windows for pushes
+and pull requests. Windows is used because the solution includes a WPF project.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).

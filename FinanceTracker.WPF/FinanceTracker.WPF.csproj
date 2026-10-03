@@ -1,11 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Semestralka\FinanceTracker.csproj" />
+    <ProjectReference Include="..\FinanceTracker\FinanceTracker.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -29,6 +25,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
   </PropertyGroup>
 
 </Project>

@@ -1,5 +1,6 @@
 <Solution>
-  <Project Path="Semestralka.CLI/FinanceTracker.CLI.csproj" />
-  <Project Path="Semestralka.WPF/FinanceTracker.WPF.csproj" />
-  <Project Path="Semestralka/FinanceTracker.csproj" />
+  <Project Path="FinanceTracker.CLI/FinanceTracker.CLI.csproj" />
+  <Project Path="FinanceTracker.WPF/FinanceTracker.WPF.csproj" />
+  <Project Path="FinanceTracker/FinanceTracker.csproj" />
+  <Project Path="FinanceTracker.Tests/FinanceTracker.Tests.csproj" />
 </Solution>

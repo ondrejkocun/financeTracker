@@ -62,7 +62,8 @@ public static class ExportImportService
 
             if (!DateTime.TryParse(dateText, CultureInfo.InvariantCulture, DateTimeStyles.None, out var date))
                 date = DateTime.Now;
-            if (!decimal.TryParse(amountText, NumberStyles.Number, CultureInfo.InvariantCulture, out var amount))
+            if (!decimal.TryParse(amountText, NumberStyles.Number, CultureInfo.CurrentCulture, out var amount) &&
+                !decimal.TryParse(amountText, NumberStyles.Number, CultureInfo.InvariantCulture, out amount))
                 continue;
 
             var type = TransactionType.Expense;
